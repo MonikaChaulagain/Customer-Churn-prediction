@@ -130,7 +130,7 @@ model.eval()
 ```
 
 ### Making Predictions
-```python
+
 # Prepare new customer data (must match preprocessing steps)
 new_customer_features = preprocess_customer_data(customer_data)
 
@@ -144,20 +144,7 @@ with torch.no_grad():
     
 print(f"Churn Probability: {churn_probability:.4f}")
 print(f"Prediction: {'Will Churn' if churn_probability > 0.5 else 'Will Stay'}")
-```
 
-## 📁 Project Structure
-
-```
-Customer-Churn-prediction/
-│
-├── csv/
-│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
-├── customer_churn_prediction.py          # Main training script
-├── customer_churn_prediction.pt          # Trained model weights
-├── README.md                             # Project documentation
-└── requirements.txt                      # Dependencies (optional)
-```
 
 ## 🔍 Training Process
 
@@ -168,22 +155,21 @@ Customer-Churn-prediction/
 - **Method**: Stratified sampling to maintain class distribution
 
 ### Training Configuration
-```python
+
 batch_size = 64
 num_epochs = 10
 learning_rate = 0.001
 optimizer = Adam
 loss_function = BCEWithLogitsLoss
-```
+
 
 ### Training Progress
-```
+
 Epoch 1: Loss: 0.4454
 Epoch 2: Loss: 0.4309
 Epoch 3: Loss: 0.4261
 ...
 Epoch 10: Loss: 0.4159
-```
 
 ## 📊 Model Performance
 
@@ -243,7 +229,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Dataset: IBM Sample Data Sets
 - Framework: PyTorch Team
 - Inspiration: Telecommunications industry churn prediction challenges
-
----
 
 **Note**: This is a demonstration project for educational and portfolio purposes. For production deployment, additional validation, monitoring, and compliance measures would be required.
